@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LifecycleActivityFragment</string>
+    <string name="action_settings">Settings</string>
+    <string name="toggle">Toggle</string>
+    <string name="undo_toggle">Undo</string>
+    <string name="replace">Replace</string>
+    <string name="remove">Remove</string>
+    <string name="welcome">API 13 and up fragments lifecycle. Press fab to start</string>
+</resources>

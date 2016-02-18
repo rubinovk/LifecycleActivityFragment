@@ -17,8 +17,8 @@ public class FragmentActivity extends Activity {
 
     private static final String TAG = FragmentActivity.class.getSimpleName();
 
-    private String tag1, tag2, tag3;
-    private Fragment f1, f2, f3;
+    private String tag1, tag2;
+    private Fragment f1, f2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,65 +47,6 @@ public class FragmentActivity extends Activity {
         getFragmentManager().beginTransaction().add(R.id.listcontainer, f2, tag2).commit();
 
     }
-
-
-    /* For debugging purposes */
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(TAG, "STATE onStop");
-    }
-
-    // only in support library
-    //    @Override
-    //    protected void onResumeFragments() {
-    //        super.onResumeFragments();
-    //        Log.d(TAG, "STATE onResumeFragments");
-    //
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(TAG, "STATE onRestart");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG, "STATE onStart");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(TAG, "STATE onPause");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG, "STATE onDestroy");
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle bundle) {
-        super.onRestoreInstanceState(bundle);
-        Log.d(TAG, "STATE onRestoreInstanceState");
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle bundle) {
-        super.onSaveInstanceState(bundle);
-        Log.d(TAG, "STATE onSaveInstanceState");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(TAG, "STATE onResume");
-    }
-
 
     @Override
     protected void onPostResume() {
@@ -170,8 +111,66 @@ public class FragmentActivity extends Activity {
                 }
             }
         });
-
-
     }
+
+
+    /* For debugging purposes */
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "STATE onStop");
+    }
+
+    // only in support library
+    //    @Override
+    //    protected void onResumeFragments() {
+    //        super.onResumeFragments();
+    //        Log.d(TAG, "STATE onResumeFragments");
+    //
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "STATE onRestart");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "STATE onStart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "STATE onPause");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "STATE onDestroy");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle bundle) {
+        super.onRestoreInstanceState(bundle);
+        Log.d(TAG, "STATE onRestoreInstanceState");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+        Log.d(TAG, "STATE onSaveInstanceState");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "STATE onResume");
+    }
+
+
 }
 

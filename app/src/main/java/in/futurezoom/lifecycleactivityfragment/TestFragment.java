@@ -49,12 +49,6 @@ abstract public class TestFragment extends Fragment {
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
-        Log.d(TAG, this.getTag() + " STATE onStop");
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
         Log.d(TAG, this.getTag() + " STATE onStart");
@@ -63,8 +57,15 @@ abstract public class TestFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        Log.d(TAG, this.getTag() + " STATE onPause");
+        Log.d(TAG, this.getTag() + " STATE onPause; isRemoving == "+ this.isRemoving());
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, this.getTag() + " STATE onStop; isRemoving == "+ this.isRemoving());
+    }
+
 
     @Override
     public void onDestroy() {
